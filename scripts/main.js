@@ -6,7 +6,7 @@
 var toDoEntry = document.getElementById('to_do_item');
 var submitToDo = document.getElementById('submit_to_do');
 var toDoList = document.getElementById('to_do_list');
-
+var resetList = document.getElementById('reset_list');
 // create an empty array
 
 var toDoEntries = [];
@@ -25,7 +25,7 @@ function render() {
     toDoList.value = '';
     var listItem = '';
     for(i = 0; i < toDoEntries.length; i++) {
-        listItem += '<p>' + toDoEntries[i] + '<p>';
+        listItem += '<p><input type="checkbox"> ' + toDoEntries[i] + '<p>';
         toDoList.innerHTML = listItem;
     }
 }
@@ -47,7 +47,11 @@ submitToDo.addEventListener('click', function() {
     clearInput();
 });
 
-
+resetList.addEventListener('click', function() {
+    toDoEntries = [];
+    listItem = '';
+    toDoList.innerHTML = '';
+});
 
 
 

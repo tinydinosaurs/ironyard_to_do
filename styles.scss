@@ -1,0 +1,102 @@
+//@import url(https://fonts.googleapis.com/css?family=Codystar|Nixie+One);
+@import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro|Source+Sans+Pro|Source+Code+Pro);
+
+$text-color: #242424;
+$border-color: #d4fff1;
+$background-color-light: #fff;
+
+	
+html, body {height: 100%};
+
+body {
+	background-color: Aquamarine;
+	box-sizing: border-box;
+	font-family: 'Source Serif Pro', serif;
+}
+
+p {
+	font-family: 'Source Code Pro', Courier, monospace;
+	margin: 0;
+}
+
+h1 { 
+	font-weight: 300;
+	font-size: 3.5em;
+	color: $text-color;
+	padding: 0;
+	margin: 16px 0;
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6);
+}
+
+.wrapper {
+	text-align: center;
+	margin-top: 2em;
+
+	input:not([type=submit]):not([type=checkbox]) {
+		background-color: $background-color-light;
+		padding: 0.5em;
+		width: 18em;
+		border: 0.5em solid $border-color;
+		color: $text-color;
+		-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+		-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+		box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.3);
+	}
+
+	button {
+		@extend input:not([type=submit]):not([type=checkbox]);
+		width: 7.75em;
+		margin-top: 1em;
+	}
+
+	section {
+	@extend input:not([type=submit]):not([type=checkbox]);
+		width: 18em;
+		min-height: 16em;
+		margin: 2em auto 0 auto;
+		text-align: left;
+		padding: 1em;
+	}
+}
+
+@media all and (min-width: 451px) {
+	
+	body {	border: 1em solid $background-color-light;
+	}
+
+	.wrapper {
+		input:not([type=submit]):not([type=checkbox]) {
+			width: 14em;
+		}
+
+		button {
+			width: 7.75em;
+			margin: 1em 0 0 1em;
+		}
+
+		section {
+			width: 22em;
+		}
+	}	
+}
+
+
+@media all and (min-width: 601px) {
+
+	.wrapper {
+
+		input:not([type=submit]):not([type=checkbox]) {
+			width: 18.75em;
+		}
+
+		button {
+			width: 9em;
+		}
+
+		section {
+			width: 28em;
+			min-height: 16em;
+			
+		}
+	}
+}
